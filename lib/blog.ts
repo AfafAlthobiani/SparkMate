@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 هدفنا إنك تنقل عفشك وأنت مرتاح، وتدخل بيت ريحته نظافة ويبرق بكل زاوية.`,
     date: '24 مايو 2026',
-    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVClO0lDqPPBerhUQ01q-VP184yfmHTmgtjbqyxrS8eC2lT6lKlH1kVd-KjzeBJFX8YvJxc7V5ZfHTxxN-o0JjQQl05AQZh_qrpp5fOLcWgu5kf8DKaM6Ato-1bD06O63hWKfO45N06e-4AggK4YEjG1lTUXIbc27gHlYPTU2st-MeSF0UlgPMi8xXBvfY/s1200/%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20-.png'
+    image: 'https://i.postimg.cc/YqVjKQvk/bdwn-%CA%BFnwan.png'
   },
   {
     id: 2,
