@@ -1,0 +1,6 @@
+{
+  "name": "رفيق اللمعة | SparkMate",
+  "description": "منصة رفيق اللمعة لخدمات التنظيف الاحترافية في المدينة المنورة - نظافة تأهيلية وشاملة للمنازل والشركات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-ibm-plex-sans-arabic), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .bubble {
+    @apply absolute rounded-full pointer-events-none;
+    background: rgba(72, 194, 193, 0.15);
+    animation: floatUp linear infinite;
+  }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100%) scale(0.8); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-120%) scale(1.2); opacity: 0; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3s ease-in-out infinite;
+}
