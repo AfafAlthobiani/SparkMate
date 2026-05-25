@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Bubbles from './Bubbles';
+import { Sparkle, ShieldCheck, CheckCircle, Home, Gem, Building2, CalendarRange, HelpCircle } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -15,8 +16,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-block bg-[#48C2C1]/15 border border-[#48C2C1]/40 text-[#48C2C1] px-4.5 py-1.5 rounded-full text-[15px] font-semibold mb-5">
-            🌟 الخيار الأول في المدينة المنورة
+          <div className="inline-flex items-center gap-2 bg-[#48C2C1]/15 border border-[#48C2C1]/40 text-[#48C2C1] px-4.5 py-1.5 rounded-full text-[15px] font-extrabold mb-5 shadow-xs">
+            <Sparkle className="w-4 h-4 text-[#48C2C1] animate-spin-slow" />
+            <span>الخيار الأول في المدينة المنورة</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight mb-5">
@@ -32,14 +34,16 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3.5">
             <a 
               href="#services" 
-              className="bg-linear-to-br from-[#48C2C1] to-[#2ea8a7] text-white px-8 py-3.5 rounded-full text-base font-bold shadow-2xl shadow-[#48C2C1]/40 hover:-translate-y-1 hover:shadow-[#48C2C1]/55 transition-all inline-flex items-center gap-2"
+              className="bg-linear-to-br from-[#48C2C1] to-[#2ea8a7] text-white px-8 py-3.5 rounded-full text-base font-bold shadow-2xl shadow-[#48C2C1]/40 hover:-translate-y-1 hover:shadow-[#48C2C1]/55 transition-all inline-flex items-center gap-2 cursor-pointer"
             >
+              <CalendarRange className="w-5 h-5" />
               احجز خدمتك الآن
             </a>
             <a 
               href="#how" 
-              className="bg-transparent text-white px-8 py-3.5 rounded-full text-base font-bold border-2 border-white/30 hover:border-[#48C2C1] hover:text-[#48C2C1] transition-all inline-flex items-center gap-2"
+              className="bg-transparent text-white px-8 py-3.5 rounded-full text-base font-bold border-2 border-white/30 hover:border-[#48C2C1] hover:text-[#48C2C1] transition-all inline-flex items-center gap-2 cursor-pointer"
             >
+              <HelpCircle className="w-5 h-5" />
               كيف يعمل؟
             </a>
           </div>
@@ -51,36 +55,44 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="relative w-85 h-96">
-            <div className="absolute inset-0 bg-linear-to-br from-[#3476A8]/30 to-[#48C2C1]/20 border border-[#48C2C1]/25 backdrop-blur-xl rounded-[28px] p-9 flex flex-col gap-4.5">
-              <div className="absolute -top-4.5 -left-5 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#3476A8] animate-float-slow">
-                ⭐ 4.9 تقييم ممتاز
+          <div className="relative w-85 h-[410px]">
+            <div className="absolute inset-0 bg-linear-to-br from-[#3476A8]/30 to-[#48C2C1]/20 border border-[#48C2C1]/25 backdrop-blur-xl rounded-[28px] p-9 flex flex-col gap-5 shadow-2xl">
+              <div className="absolute -top-4.5 -left-5 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#3476A8] animate-float-slow border border-[#3476A8]/10">
+                <ShieldCheck className="w-4 h-4 text-[#3476A8]" />
+                <span>تحت إشراف طاقم سعودي</span>
               </div>
-              <div className="absolute bottom-7.5 -left-6 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#48C2C1] animate-float-slow [animation-delay:1.5s]">
-                ✅ +10 عميل راضٍ
+              <div className="absolute bottom-7.5 -left-6 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#48C2C1] animate-float-slow [animation-delay:1.5s] border border-[#48C2C1]/10">
+                <CheckCircle className="w-4 h-4 text-[#48C2C1]" />
+                <span>+10 عميل راضٍ</span>
               </div>
               
-              <div className="bg-[#48C2C1]/15 border border-[#48C2C1]/30 rounded-2xl p-4.5 flex items-center grow gap-3.5">
-                <div className="text-3xl">🏠</div>
+              <div className="bg-[#48C2C1]/10 hover:bg-[#48C2C1]/15 border border-[#48C2C1]/25 hover:border-[#48C2C1]/40 rounded-2xl p-4 flex items-center grow gap-3.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center shrink-0 shadow-md">
+                  <Home className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <div className="text-[12px] text-white/60">نظافة تأهيلية</div>
-                  <div className="text-2xl font-extrabold text-white">من 229 ريال</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">نظافة تأهيلية</div>
+                  <div className="text-xl font-bold text-white">تبدأ من 229 ريال</div>
                 </div>
               </div>
               
-              <div className="bg-[#48C2C1]/15 border border-[#48C2C1]/30 rounded-2xl p-4.5 flex items-center grow gap-3.5">
-                <div className="text-3xl">💎</div>
+              <div className="bg-[#48C2C1]/10 hover:bg-[#48C2C1]/15 border border-[#48C2C1]/25 hover:border-[#48C2C1]/40 rounded-2xl p-4 flex items-center grow gap-3.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center shrink-0 shadow-md">
+                  <Gem className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <div className="text-[12px] text-white/60">نظافة شاملة</div>
-                  <div className="text-2xl font-extrabold text-white">من 329 ريال</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">نظافة شاملة</div>
+                  <div className="text-xl font-bold text-white">تبدأ من 329 ريال</div>
                 </div>
               </div>
               
-              <div className="bg-[#48C2C1]/15 border border-[#48C2C1]/30 rounded-2xl p-4.5 flex items-center grow gap-3.5">
-                <div className="text-3xl">🏢</div>
+              <div className="bg-[#48C2C1]/10 hover:bg-[#48C2C1]/15 border border-[#48C2C1]/25 hover:border-[#48C2C1]/40 rounded-2xl p-4 flex items-center grow gap-3.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center shrink-0 shadow-md">
+                  <Building2 className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <div className="text-[12px] text-white/60">شركات ومكاتب</div>
-                  <div className="text-2xl font-extrabold text-white">سعر خاص</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">شركات ومكاتب</div>
+                  <div className="text-xl font-bold text-white">سعر خاص ومميز</div>
                 </div>
               </div>
             </div>

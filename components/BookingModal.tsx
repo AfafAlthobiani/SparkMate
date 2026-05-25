@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Service, ServiceUnit } from '@/lib/services';
+import ServiceIcon from './ServiceIcon';
 
 interface BookingModalProps {
   service: Service | null;
@@ -19,7 +20,11 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
   const handleWhatsApp = () => {
     if (!selectedUnit && service.units) return;
 
-    const unitInfo = selectedUnit ? `\n🏠 النوع: ${selectedUnit.unit}\n💰 السعر: ${selectedUnit.price}` : '';
+    const unitInfo = selectedUnit 
+      ? (selectedUnit.unit 
+          ? `\n🏠 النوع: ${selectedUnit.unit}\n💰 السعر: ${selectedUnit.price}` 
+          : `\n💰 السعر: ${selectedUnit.price}`)
+      : '';
     const msg = encodeURIComponent(`مرحباً رفيق اللمعة 👋\n\nأريد حجز خدمة:\n📋 ${service.name} - ${service.desc}${unitInfo}\n\nأرجو التواصل لتأكيد الموعد 🙏`);
     window.open(`https://wa.me/966559205714?text=${msg}`, '_blank');
   };
@@ -52,31 +57,45 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
           </div>
 
           <div className="bg-linear-to-br from-[#dceef9] to-[#e0f7f7] border border-[#48C2C1] rounded-2xl p-3.5 px-4.5 text-base font-bold text-[#3476A8] mb-5 flex items-center gap-2.5">
-            <span className="text-xl">{service.icon}</span>
+            <ServiceIcon id={service.id} className="w-5 h-5 text-[#3476A8]" />
             <span>{service.name} – {service.desc}</span>
           </div>
 
-          <p className="text-sm text-[#6b7a8d] mb-4">اختر نوع الوحدة ثم اضغط لإرسال الطلب عبر واتساب:</p>
+          {service.units && service.units.some(u => u.unit) && (
+            <p className="text-sm text-[#6b7a8d] mb-4">اختر نوع الوحدة ثم اضغط لإرسال الطلب عبر واتساب:</p>
+          )}
 
           <div className="mb-6">
             {service.units ? (
               <div className="space-y-3">
-                {service.units.map((u, i) => (
-                  <div
-                    key={i}
-                    onClick={() => setSelectedUnit(u)}
-                    className={`flex justify-between items-center p-3 px-4 border rounded-xl cursor-pointer transition-all ${
-                      selectedUnit?.unit === u.unit
-                        ? 'bg-[#e0f7f7] border-[#48C2C1] ring-1 ring-[#48C2C1]'
-                        : 'border-[#e8f4ff] hover:bg-[#f0f8ff]'
-                    }`}
-                  >
-                    <span className="text-[15px] font-semibold text-[#0d1b2a]">🏠 {u.unit}</span>
-                    <div className="text-[17px] font-extrabold text-[#3476A8]">
-                      {u.price}
+                {service.units.map((u, i) => {
+                  if (!u.unit) {
+                    return (
+                      <div
+                        key={i}
+                        className="flex justify-center items-center p-4 border border-[#48C2C1] bg-[#e0f7f7] rounded-xl text-base"
+                      >
+                        <span className="text-lg font-black text-[#3476A8]">{u.price}</span>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div
+                      key={i}
+                      onClick={() => setSelectedUnit(u)}
+                      className={`flex justify-between items-center p-3 px-4 border rounded-xl cursor-pointer transition-all ${
+                        selectedUnit?.unit === u.unit
+                          ? 'bg-[#e0f7f7] border-[#48C2C1] ring-1 ring-[#48C2C1]'
+                          : 'border-[#e8f4ff] hover:bg-[#f0f8ff]'
+                      }`}
+                    >
+                      <span className="text-[15px] font-semibold text-[#0d1b2a]">🏠 {u.unit}</span>
+                      <div className="text-[17px] font-extrabold text-[#3476A8]">
+                        {u.price}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             ) : (
               <div className="bg-[#e0f7f7] border border-dashed border-[#48C2C1] rounded-xl p-4 text-[13px] text-[#1a7a7a] font-semibold leading-relaxed">

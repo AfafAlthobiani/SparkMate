@@ -11,6 +11,7 @@ import Blog from '@/components/Blog';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
+import PhoneFAB from '@/components/PhoneFAB';
 import { Service } from '@/lib/services';
 
 export default function Home() {
@@ -27,6 +28,8 @@ export default function Home() {
       <Reviews />
       <CTA />
       <Footer />
+      
+      <PhoneFAB />
       
       {selectedService && (
         <BookingModal 

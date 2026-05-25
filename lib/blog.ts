@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 هدفنا إنك تنقل عفشك وأنت مرتاح، وتدخل بيت ريحته نظافة ويبرق بكل زاوية.`,
     date: '24 مايو 2026',
-    image: 'https://picsum.photos/seed/cleaning2/600/400'
+    image: '/images/new_house_cleaning.png'
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 نحن رفيقك في النظافة واللمعان، نوفر لك باقات أسبوعية وشهرية بأسعار تنافسية في المدينة المنورة.`,
     date: '20 مايو 2026',
-    image: 'https://picsum.photos/seed/cleaning2/600/400'
+    image: '/images/home_regular_maintenance.png'
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 في "رفيق اللمعة"، نلتزم بأعلى معايير الجودة السعودية ونحرص إن فريقنا يكون واجهة مشرفة ومؤهلة تماماً.`,
     date: '15 مايو 2026',
-    image: 'https://picsum.photos/seed/cleaning3/600/400'
+    image: '/images/reliable_cleaning_company.png'
   },
   {
     id: 4,
@@ -64,6 +64,6 @@ export const BLOG_POSTS: BlogPost[] = [
 
 وإذا كنت تبحث عن تنظيف عميق بالبخار، رفيق اللمعة هنا لخدمتك بأحدث الأجهزة اللي ترجع السجاد كأنه جديد.`,
     date: '10 مايو 2026',
-    image: 'https://picsum.photos/seed/cleaning4/600/400'
+    image: '/images/clean_carpet_luxurious.png'
   }
 ];

@@ -28,9 +28,9 @@ export default function HowItWorks() {
       <Bubbles />
       
       <div className="relative z-10 text-center mb-16">
-        <p className="text-sm font-bold tracking-[2px] text-[#48C2C1] uppercase mb-3">طريقة الحجز</p>
-        <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">3 خطوات بس وخلصنا!</h2>
-        <p className="text-base text-white/65 max-w-xl mx-auto leading-relaxed">حجز خدمتك أسهل من أي وقت، بدون تعقيد ولا انتظار</p>
+        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">طريقة الحجز</p>
+        <h2 className="text-4xl md:text-6xl font-black text-white mb-5 leading-tight">3 خطوات بس وخلصنا!</h2>
+        <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">حجز خدمتك أسهل من أي وقت، بدون تعقيد ولا انتظار</p>
       </div>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto before:hidden md:before:block before:absolute before:top-14 before:inset-x-[15%] before:h-0.5 before:bg-linear-to-l before:from-[#48C2C1] before:to-[#3476A8] before:z-0">
@@ -46,8 +46,8 @@ export default function HowItWorks() {
             <div className="w-13.5 h-13.5 rounded-full bg-linear-to-br from-[#48C2C1] to-[#3476A8] flex items-center justify-center text-2xl font-black text-white mx-auto mb-5 shadow-[0_0_0_8px_rgba(72,194,193,0.15)]">
               {step.num}
             </div>
-            <h3 className="text-xl font-extrabold text-white mb-2.5">{step.title}</h3>
-            <p className="text-sm text-white/65 leading-relaxed">{step.text}</p>
+            <h3 className="text-2xl font-black text-white mb-3.5">{step.title}</h3>
+            <p className="text-base text-white/75 leading-relaxed">{step.text}</p>
           </motion.div>
         ))}
       </div>

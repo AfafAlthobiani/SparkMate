@@ -15,9 +15,9 @@ export default function Blog() {
   return (
     <section id="blog" className="py-24 px-[5%] bg-white">
       <div className="text-center mb-16">
-        <p className="text-sm font-bold tracking-[2px] text-[#48C2C1] uppercase mb-3">المدونة</p>
-        <h2 className="text-3xl md:text-5xl font-black text-[#0d1b2a] mb-3 leading-tight">آخر نصائحنا لبيت يبرق بكل زاوية</h2>
-        <p className="text-base text-[#6b7a8d] max-w-xl mx-auto leading-relaxed">نشارككم خبرتنا في عالم النظافة ونبسط لكم الحلول عشان بيوتكم ومكاتبكم دايم تكون واجهة مشرفة</p>
+        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">المدونة</p>
+        <h2 className="text-4xl md:text-6xl font-black text-[#0d1b2a] mb-5 leading-tight">آخر نصائحنا لبيت يبرق بكل زاوية</h2>
+        <p className="text-lg md:text-xl text-[#4f5e71] max-w-2xl mx-auto leading-relaxed">نشارككم خبرتنا في عالم النظافة ونبسط لكم الحلول عشان بيوتكم ومكاتبكم دايم تكون واجهة مشرفة</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
@@ -43,15 +43,15 @@ export default function Blog() {
                 {post.date}
               </div>
             </div>
-            <h3 className="text-xl md:text-2xl font-black text-[#0d1b2a] mb-3 group-hover:text-[#48C2C1] transition-colors leading-tight">
+            <h3 className="text-2xl md:text-3xl font-black text-[#0d1b2a] mb-4 group-hover:text-[#48C2C1] transition-colors leading-tight">
               {post.title}
             </h3>
-            <p className="text-sm text-[#6b7a8d] leading-relaxed mb-4">
+            <p className="text-base text-[#4f5e71] leading-relaxed mb-4">
               {post.excerpt}
             </p>
-            <div className="text-[#3476A8] font-bold text-sm flex items-center gap-1">
+            <div className="text-[#3476A8] font-extrabold text-base flex items-center gap-1.5">
               اقرأ المزيد 
-              <span className="group-hover:translate-x-[-4px] transition-transform">←</span>
+              <span className="group-hover:translate-x-[-4px] transition-transform font-bold">←</span>
             </div>
           </motion.div>
         ))}
@@ -60,10 +60,10 @@ export default function Blog() {
       <div className="text-center">
         <button 
           onClick={() => setShowModal(true)}
-          className="inline-flex items-center gap-2 bg-[#f0f8ff] text-[#3476A8] px-8 py-3.5 rounded-full text-base font-bold hover:bg-[#3476A8] hover:text-white transition-all shadow-sm border-2 border-[#3476A8]/10"
+          className="inline-flex items-center gap-2.5 bg-[#f0f8ff] text-[#3476A8] px-10 py-4.5 rounded-full text-lg font-extrabold hover:bg-[#3476A8] hover:text-white transition-all shadow-md border-2 border-[#3476A8]/15 hover:scale-105"
         >
           عرض كل المقالات
-          <span className="text-lg">📑</span>
+          <span className="text-xl">📑</span>
         </button>
       </div>
 

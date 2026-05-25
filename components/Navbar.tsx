@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[5%] h-18 shadow-sm">
       <div className="flex items-center gap-2.5">
         <Image 
-          src="/logo.png" 
+          src="/logo.png?v=4" 
           alt="رفيق اللمعة" 
           width={180} 
           height={60} 

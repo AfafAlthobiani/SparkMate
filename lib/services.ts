@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
     icon: '🏠',
     name: 'نظافة تأهيلية',
     desc: 'شقة صغيرة',
-    units: [{ unit: 'غرفتين وصالة', price: '229 ريال' }]
+    units: [{ unit: '', price: 'تبدأ من 229 ريال' }]
   },
   {
     id: 't2',
@@ -28,7 +28,7 @@ export const SERVICES: Service[] = [
     icon: '🏡',
     name: 'نظافة تأهيلية',
     desc: 'شقة كبيرة',
-    units: [{ unit: '4 غرف وصالة', price: '419 ريال' }]
+    units: [{ unit: '', price: 'تبدأ من 419 ريال' }]
   },
   {
     id: 't3',
@@ -37,9 +37,9 @@ export const SERVICES: Service[] = [
     name: 'نظافة تأهيلية',
     desc: 'دور مستقل وفلل',
     units: [
-      { unit: 'دور مستقل', price: 'من 500 ريال' },
-      { unit: 'فلة صغيرة (حتى 300م)', price: 'من 819 ريال' },
-      { unit: 'فلة كبيرة (+400م)', price: 'من 1,119 ريال' }
+      { unit: 'دور مستقل', price: 'تبدأ من 500 ريال' },
+      { unit: 'فلة صغيرة (حتى 300م)', price: 'تبدأ من 819 ريال' },
+      { unit: 'فلة كبيرة (+400م)', price: 'تبدأ من 1,119 ريال' }
     ]
   },
   {
@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
     icon: '💎',
     name: 'نظافة شاملة',
     desc: 'شقة صغيرة',
-    units: [{ unit: 'غرفتين وصالة', price: '329 ريال' }]
+    units: [{ unit: '', price: 'تبدأ من 329 ريال' }]
   },
   {
     id: 's2',
@@ -56,7 +56,7 @@ export const SERVICES: Service[] = [
     icon: '🌟',
     name: 'نظافة شاملة',
     desc: 'شقة كبيرة',
-    units: [{ unit: '4 غرف وصالة', price: '579 ريال' }]
+    units: [{ unit: '', price: 'تبدأ من 579 ريال' }]
   },
   {
     id: 's3',
@@ -65,9 +65,9 @@ export const SERVICES: Service[] = [
     name: 'نظافة شاملة',
     desc: 'دور مستقل وفلل',
     units: [
-      { unit: 'دور مستقل', price: 'من 749 ريال' },
-      { unit: 'فلة صغيرة (حتى 300م)', price: 'من 1,119 ريال' },
-      { unit: 'فلة كبيرة (+400م)', price: 'من 1,449 ريال' }
+      { unit: 'دور مستقل', price: 'تبدأ من 749 ريال' },
+      { unit: 'فلة صغيرة (حتى 300م)', price: 'تبدأ من 1,119 ريال' },
+      { unit: 'فلة كبيرة (+400م)', price: 'تبدأ من 1,449 ريال' }
     ]
   },
   {

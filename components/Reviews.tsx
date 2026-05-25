@@ -28,9 +28,9 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-24 px-[5%] bg-[#f0f8ff]">
       <div className="text-center mb-16">
-        <p className="text-sm font-bold tracking-[2px] text-[#48C2C1] uppercase mb-3">آراء العملاء</p>
-        <h2 className="text-3xl md:text-5xl font-black text-[#0d1b2a] mb-3 leading-tight">ماذا يقول عملاؤنا؟</h2>
-        <p className="text-base text-[#6b7a8d] max-w-xl mx-auto leading-relaxed">ثقتهم فينا هي أكبر جائزة نحصل عليها</p>
+        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">آراء العملاء</p>
+        <h2 className="text-4xl md:text-6xl font-black text-[#0d1b2a] mb-5 leading-tight">ماذا يقول عملاؤنا؟</h2>
+        <p className="text-lg md:text-xl text-[#4f5e71] max-w-2xl mx-auto leading-relaxed">ثقتهم فينا هي أكبر جائزة نحصل عليها</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5.5 max-w-6xl mx-auto">
@@ -42,15 +42,15 @@ export default function Reviews() {
             viewport={{ once: true }}
             className="bg-white rounded-[22px] p-7 border border-[#e8f4ff] shadow-[0_4px_18px_rgba(52,118,168,0.06)] hover:-translate-y-1.5 transition-all"
           >
-            <div className="text-[#fbbf24] text-lg mb-3.5">★★★★★</div>
-            <p className="text-[15px] text-[#0d1b2a] leading-relaxed mb-5 italic">{review.text}</p>
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center text-lg text-white font-black">
+            <div className="text-[#fbbf24] text-xl mb-3.5">★★★★★</div>
+            <p className="text-[18px] text-[#0d1b2a] font-medium leading-relaxed mb-6 italic">{review.text}</p>
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center text-xl text-white font-black">
                 {review.initial}
               </div>
               <div>
-                <div className="text-[15px] font-bold text-[#0d1b2a]">{review.name}</div>
-                <div className="text-[12px] text-[#6b7a8d]">{review.location}</div>
+                <div className="text-[17px] font-black text-[#0d1b2a]">{review.name}</div>
+                <div className="text-[14px] text-[#4f5e71]">{review.location}</div>
               </div>
             </div>
           </motion.div>
