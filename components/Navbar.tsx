@@ -1,20 +1,41 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function Navbar() {
+  const [logoSrc, setLogoSrc] = useState('/images/logo.png');
+  const [hasError, setHasError] = useState(false);
+
+  const handleLogoError = () => {
+    if (logoSrc === '/images/logo.png') {
+      setLogoSrc('/logo.png');
+    } else {
+      setHasError(true);
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[5%] h-18 shadow-sm">
       <div className="flex items-center gap-2.5">
-        <Image 
-          src="/logo.png?v=4" 
-          alt="رفيق اللمعة" 
-          width={180} 
-          height={60} 
-          className="h-10 md:h-12 w-auto object-contain"
-          unoptimized
-        />
+        {!hasError ? (
+          <Image 
+            src={logoSrc} 
+            alt="رفيق اللمعة" 
+            width={180} 
+            height={60} 
+            className="h-10 md:h-12 w-auto object-contain"
+            onError={handleLogoError}
+            priority
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <div className="flex items-center gap-1 select-none">
+            <span className="text-[#0d1b2a] font-black text-xl tracking-tight">
+              رفيق <span className="text-[#48C2C1]">اللمعة</span>
+            </span>
+          </div>
+        )}
       </div>
       
       <ul className="hidden md:flex gap-7 list-none">

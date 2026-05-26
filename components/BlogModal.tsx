@@ -56,6 +56,9 @@ export default function BlogModal({ onClose }: BlogModalProps) {
                     src={post.image} 
                     alt={post.title} 
                     fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                    quality={75}
+                    loading="lazy"
                     className="object-cover"
                     referrerPolicy="no-referrer"
                   />

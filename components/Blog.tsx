@@ -36,6 +36,9 @@ export default function Blog() {
                 src={post.image} 
                 alt={post.title} 
                 fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={70}
+                loading="lazy"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />

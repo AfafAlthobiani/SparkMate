@@ -1,24 +1,42 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import ContactForm from './ContactForm';
 import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 
 export default function Footer() {
+  const [logoSrc, setLogoSrc] = useState('/images/logo.png');
+  const [hasError, setHasError] = useState(false);
+
+  const handleLogoError = () => {
+    if (logoSrc === '/images/logo.png') {
+      setLogoSrc('/logo.png');
+    } else {
+      setHasError(true);
+    }
+  };
+
   return (
     <footer id="contact" className="bg-[#0d1b2a] text-white/75 pt-15 px-[5%] pb-7.5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto mb-12">
         <div className="flex flex-col">
           <div className="flex items-center justify-center mb-1 bg-white px-4 py-2 rounded-xl w-44 shadow-md select-none">
-            <Image 
-              src="/logo.png?v=4" 
-              alt="رفيق اللمعة" 
-              width={150} 
-              height={50} 
-              className="h-10 w-auto object-contain"
-              unoptimized
-            />
+            {!hasError ? (
+              <Image 
+                src={logoSrc} 
+                alt="رفيق اللمعة" 
+                width={150} 
+                height={50} 
+                className="h-10 w-auto object-contain"
+                onError={handleLogoError}
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <span className="text-[#0d1b2a] font-bold text-base tracking-tight">
+                رفيق <span className="text-[#48C2C1]">اللمعة</span>
+              </span>
+            )}
           </div>
           <p className="text-[13px] text-white/50 leading-relaxed my-4">رفيقك في النظافة واللمعان<br />نخدم المدينة المنورة وضواحيها بكل احتراف وأمانة</p>
           <div className="flex gap-2.5">

@@ -10,40 +10,39 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen bg-linear-to-br from-[#0d1b2a] via-[#1a3a5c] to-[#0d2d40] flex items-center overflow-hidden">
       <Bubbles />
       
-      <div className="relative z-10 w-[90%] max-w-7xl mx-auto py-32 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-right">
+      <div className="relative z-10 w-[90%] max-w-7xl mx-auto py-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-right">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center gap-2 bg-[#48C2C1]/15 border border-[#48C2C1]/40 text-[#48C2C1] px-4.5 py-1.5 rounded-full text-[15px] font-extrabold mb-5 shadow-xs">
-            <Sparkle className="w-4 h-4 text-[#48C2C1] animate-spin-slow" />
+          <div className="inline-flex items-center gap-2 bg-[#48C2C1]/15 border border-[#48C2C1]/40 text-[#48C2C1] px-3 sm:px-4.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-[15px] font-extrabold mb-5 shadow-xs">
+            <Sparkle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#48C2C1] animate-spin-slow" />
             <span>الخيار الأول في المدينة المنورة</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight mb-5">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-5">
             رفيقك في<br />
             <span className="text-[#48C2C1]">النظافة واللمعان</span>
           </h1>
           
-          <p className="text-lg text-white/75 leading-relaxed mb-9">
-            نقدم لك خدمات تنظيف احترافية تُعيد لمنزلك بريقه وجماله،<br />
-            بأيدي متخصصة وأسعار تناسب الجميع في المدينة المنورة
+          <p className="text-base sm:text-lg text-white/75 leading-relaxed mb-6 sm:mb-9 max-w-xl">
+            نقدم لك خدمات تنظيف احترافية تُعيد لمنزلك بريقه وجماله، بأيدي متخصصة وأسعار تناسب الجميع في المدينة المنورة.
           </p>
           
-          <div className="flex flex-wrap gap-3.5">
+          <div className="flex flex-wrap gap-2.5 sm:gap-3.5">
             <a 
               href="#services" 
-              className="bg-linear-to-br from-[#48C2C1] to-[#2ea8a7] text-white px-8 py-3.5 rounded-full text-base font-bold shadow-2xl shadow-[#48C2C1]/40 hover:-translate-y-1 hover:shadow-[#48C2C1]/55 transition-all inline-flex items-center gap-2 cursor-pointer"
+              className="bg-linear-to-br from-[#48C2C1] to-[#2ea8a7] text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-bold shadow-2xl shadow-[#48C2C1]/40 hover:-translate-y-1 hover:shadow-[#48C2C1]/55 transition-all inline-flex items-center gap-1.5 sm:gap-2 cursor-pointer"
             >
-              <CalendarRange className="w-5 h-5" />
+              <CalendarRange className="w-4 h-4 sm:w-5 sm:h-5" />
               احجز خدمتك الآن
             </a>
             <a 
               href="#how" 
-              className="bg-transparent text-white px-8 py-3.5 rounded-full text-base font-bold border-2 border-white/30 hover:border-[#48C2C1] hover:text-[#48C2C1] transition-all inline-flex items-center gap-2 cursor-pointer"
+              className="bg-transparent text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-bold border-2 border-white/30 hover:border-[#48C2C1] hover:text-[#48C2C1] transition-all inline-flex items-center gap-1.5 sm:gap-2 cursor-pointer"
             >
-              <HelpCircle className="w-5 h-5" />
+              <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               كيف يعمل؟
             </a>
           </div>
