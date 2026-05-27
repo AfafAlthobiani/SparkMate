@@ -29,6 +29,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://sparkmate.sa',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }
+    ]
+  },
   robots: {
     index: true,
     follow: true,
