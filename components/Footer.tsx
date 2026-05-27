@@ -72,7 +72,7 @@ export default function Footer() {
             <li><a href="#how" className="text-white/60 hover:text-[#48C2C1] transition-colors text-sm">طريقة الحجز</a></li>
             <li><a href="#why" className="text-white/60 hover:text-[#48C2C1] transition-colors text-sm">لماذا نحن؟</a></li>
             <li><a href="#reviews" className="text-white/60 hover:text-[#48C2C1] transition-colors text-sm">آراء العملاء</a></li>
-            <li><a href="#cta" className="text-white/60 hover:text-[#48C2C1] transition-colors text-sm">احجز الآن</a></li>
+            <li><a href="#services" className="text-white/60 hover:text-[#48C2C1] transition-colors text-sm">احجز الآن</a></li>
           </ul>
         </div>
 
