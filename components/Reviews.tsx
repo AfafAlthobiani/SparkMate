@@ -46,7 +46,11 @@ export default function Reviews() {
             viewport={{ once: true }}
             className="bg-white rounded-[22px] p-7 border border-[#e8f4ff] shadow-[0_4px_18px_rgba(52,118,168,0.06)] hover:-translate-y-1.5 transition-all"
           >
-            <div className="text-[#fbbf24] text-xl mb-3.5">★★★★★</div>
+            <div className="flex gap-1 mb-3.5" aria-label="تقييم 5 من 5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />
+              ))}
+            </div>
             <p className="text-[18px] text-[#0d1b2a] font-medium leading-relaxed mb-6 italic">{review.text}</p>
             <div className="flex items-center gap-3.5">
               <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center text-xl text-white font-black">

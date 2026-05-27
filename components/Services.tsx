@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES, Service } from '@/lib/services';
 import ServiceIcon, { UnitIcon } from './ServiceIcon';
-import { Info, Building2, Sparkles, Clock } from 'lucide-react';
+import { Info, Sparkles } from 'lucide-react';
 
 interface ServicesProps {
   onBook: (service: Service) => void;
@@ -170,54 +170,6 @@ export default function Services({ onBook }: ServicesProps) {
           ))}
         </AnimatePresence>
       </motion.div>
-
-      {/* Saudi Supervision & Pricing Notice Banner */}
-      <div className="mt-16 max-w-5xl mx-auto bg-white rounded-3xl p-6 sm:p-9 border-2 border-[#e0f7f7] shadow-[0_12px_30px_-5px_rgba(52,118,168,0.08)] text-right relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-2.5 h-full bg-gradient-to-b from-[#3476A8] to-[#48C2C1]" />
-        
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6 pb-6 border-b border-dashed border-[#e0f7f7]">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">🇸🇦</span>
-            <div>
-              <h3 className="text-xl sm:text-2xl font-black text-[#0d1b2a]">بإشراف شاب سعودي 🫡</h3>
-              <p className="text-sm font-bold text-[#1a7a7a] mt-0.5">بخدمتكم في جميع أعمال التنظيف والمتابعة المباشرة لضمان أعلى جودة.</p>
-            </div>
-          </div>
-          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto mt-3 sm:mt-0 flex items-center gap-1.5 select-none">
-            <Clock className="w-4 h-4 text-[#1a7a7a]" />
-            <span>الأسعار لفترة محدودة</span>
-          </span>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#4f5e71] text-sm sm:text-base leading-relaxed font-bold">
-          <div className="space-y-3">
-            <h4 className="text-[#3476A8] font-black text-[15px] sm:text-[16px] flex items-center gap-2">
-              <Info className="w-5 h-5 text-[#3476A8] shrink-0" />
-              <span>ملاحظة هامة بشأن تسعير الخدمات:</span>
-            </h4>
-            <ul className="space-y-2 pr-2.5">
-              <li className="flex items-start gap-2 text-xs sm:text-[14px]">
-                <span className="text-[#48C2C1] mt-1 shrink-0">✔</span>
-                <span>الأسعار أعلاه تختلف حسب الحجم والمساحة، ويتم احتساب السعر النهائي بعد المعاينة الميدانية لضمان الدقة والنزاهة.</span>
-              </li>
-              <li className="flex items-start gap-2 text-xs sm:text-[14px]">
-                <span className="text-[#48C2C1] mt-1 shrink-0">✔</span>
-                <span>لأعمال غسيل الكنب والسجاد: الأمتار الزائدة عن عرض العرض الأساسي تحسب بدقة وبخصم خاص ومميز جداً لرضاكم.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="space-y-3">
-            <h4 className="text-[#3476A8] font-black text-[15px] sm:text-[16px] flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-[#3476A8] shrink-0" />
-              <span>المساحات التجارية الكبرى الخاصّة:</span>
-            </h4>
-            <p className="text-xs sm:text-[14px] leading-relaxed pr-2.5">
-              في حال وجود مساحات أكبر مثل <strong>المحلات التجارية، والمدارس، والنوادي، والمكاتب، والشاليهات</strong>، يرجى التواصل المباشر معنا لتزويدكم بالسعر المميز الذي يناسب احتياجاتكم بدقة.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

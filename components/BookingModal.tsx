@@ -6,7 +6,7 @@ import { Service, ServiceUnit } from '@/lib/services';
 import ServiceIcon, { UnitIcon } from './ServiceIcon';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import { Calendar, Clock, FileText, Sparkles, Check, ChevronRight, X, MapPin, Hash, Shield, Sunrise, Sun, Moon } from 'lucide-react';
+import { Calendar, Clock, FileText, Sparkles, Check, ChevronRight, X, MapPin, Hash, Shield, Sunrise, Sun, Moon, Ruler } from 'lucide-react';
 
 interface BookingModalProps {
   service: Service | null;
@@ -249,8 +249,9 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
           {/* District & Approximate Size Fields */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div>
-              <label className="block text-sm font-black text-[#0d1b2a] mb-2">
-                🏠 الحي السكني بالمدينة المنورة:
+              <label className="flex items-center gap-1.5 text-sm font-black text-[#0d1b2a] mb-2">
+                <MapPin className="w-4 h-4 text-[#3476A8]" />
+                <span>الحي السكني بالمدينة المنورة:</span>
               </label>
               <div className="relative">
                 <input
@@ -258,7 +259,7 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
                   value={district}
                   onChange={(e) => setDistrict(e.target.value)}
                   placeholder="العزيزية، الخالدية، الرانوناء..."
-                  className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-sm text-[#0d1b2a] font-bold placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all text-right"
+                  className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-base sm:text-sm text-[#0d1b2a] font-bold placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all text-right"
                   required
                 />
                 <MapPin className="absolute right-3.5 top-3.5 w-4.5 h-4.5 text-[#3476A8]" />
@@ -266,8 +267,9 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
             </div>
 
             <div>
-              <label className="block text-sm font-black text-[#0d1b2a] mb-2">
-                📏 عدد القطع أو المساحة التقريبية:
+              <label className="flex items-center gap-1.5 text-sm font-black text-[#0d1b2a] mb-2">
+                <Ruler className="w-4 h-4 text-[#3476A8]" />
+                <span>عدد القطع أو المساحة التقريبية:</span>
               </label>
               <div className="relative">
                 <input
@@ -275,9 +277,9 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
                   value={approximateSize}
                   onChange={(e) => setApproximateSize(e.target.value)}
                   placeholder="مثال: مجلس ٥*٤، كنب متصل، ٣ غرف..."
-                  className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-sm text-[#0d1b2a] font-bold placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all text-right"
+                  className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-base sm:text-sm text-[#0d1b2a] font-bold placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all text-right"
                 />
-                <Hash className="absolute right-3.5 top-3.5 w-4.5 h-4.5 text-[#3476A8]" />
+                <Ruler className="absolute right-3.5 top-3.5 w-4.5 h-4.5 text-[#3476A8]" />
               </div>
             </div>
           </div>
@@ -293,7 +295,7 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
                 onChange={(e) => setCustomerNotes(e.target.value)}
                 placeholder="مثال: يرجى التركيز على زوايا الجدران، أو غسيل سجاد الكنب..."
                 rows={2}
-                className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-sm text-[#0d1b2a] placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all resize-none text-right"
+                className="w-full bg-[#f8fbfe] border-2 border-[#e0f7f7] rounded-xl pr-10 pl-4 py-3 text-base sm:text-sm text-[#0d1b2a] placeholder-gray-400 focus:outline-none focus:border-[#48C2C1] transition-all resize-none text-right"
               />
               <FileText className="absolute right-3 top-3.5 w-4.5 h-4.5 text-gray-400 pointer-events-none" />
             </div>
