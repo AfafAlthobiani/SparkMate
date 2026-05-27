@@ -2,38 +2,23 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Users, Coins, Clock, Sparkle, ShieldCheck, Trophy } from 'lucide-react';
+import { Users, Coins, Trophy } from 'lucide-react';
 
 const FEATURES = [
   {
     icon: <Users className="w-6 h-6 text-white" />,
     title: 'فريق محترف ومدرّب',
-    text: 'كل أفراد فريقنا مدرّبون على أعلى مستوى من الاحترافية والدقة في العمل'
+    text: 'طواقمنا مدرّبة على أعلى مستوى من الاحترافية والدقة لضمان تقديم أفضل خدمة.'
   },
   {
     icon: <Coins className="w-6 h-6 text-white" />,
     title: 'أسعار واضحة وشفافة',
-    text: 'بدون رسوم خفية أو مفاجآت، ويتم تحديد السعر النهائي حسب نوع الخدمة ومساحة الموقع.'
-  },
-  {
-    icon: <Clock className="w-6 h-6 text-white" />,
-    title: 'التزام بالمواعيد',
-    text: 'نحترم وقتك ونصل في الموعد المحدد بدون أي تأخير'
-  },
-  {
-    icon: <Sparkle className="w-6 h-6 text-white" />,
-    title: 'منتجات تنظيف آمنة',
-    text: 'نستخدم منتجات تنظيف عالية الجودة وآمنة لجميع أفراد العائلة'
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6 text-white" />,
-    title: 'خصوصية وأمانة',
-    text: 'فريقنا موثوق وأمين، ممتلكاتك في أمان تامة خلال تقديم الخدمة'
+    text: 'نقدم خدمات ممتازة بأسعار منافسة وواضحة تماماً بدون أي رسوم خفية.'
   },
   {
     icon: <Trophy className="w-6 h-6 text-white" />,
-    title: 'ضمان الرضا',
-    text: 'نضمن رضاك التام عن الخدمة، وإلا نعيد الكرّة حتى تكون راضياً 100%'
+    title: 'ضمان الجودة والرضا',
+    text: 'نضمن رضاكم التام بنسبة 100% عن جودة التنظيف، ممتلكاتكم في أمان تامة.'
   }
 ];
 
