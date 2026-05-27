@@ -58,11 +58,11 @@ export default function Hero() {
             <div className="absolute inset-0 bg-linear-to-br from-[#3476A8]/30 to-[#48C2C1]/20 border border-[#48C2C1]/25 backdrop-blur-xl rounded-[28px] p-9 flex flex-col gap-5 shadow-2xl">
               <div className="absolute -top-4.5 -left-5 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#3476A8] animate-float-slow border border-[#3476A8]/10">
                 <ShieldCheck className="w-4 h-4 text-[#3476A8]" />
-                <span>تحت إشراف طاقم سعودي</span>
+                <span>إشراف شاب سعودي🇸🇦 (بخدمتكم)</span>
               </div>
               <div className="absolute bottom-7.5 -left-6 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#48C2C1] animate-float-slow [animation-delay:1.5s] border border-[#48C2C1]/10">
                 <CheckCircle className="w-4 h-4 text-[#48C2C1]" />
-                <span>+10 عميل راضٍ</span>
+                <span>الأسعار لفترة محدودة ⏱️</span>
               </div>
               
               <div className="bg-[#48C2C1]/10 hover:bg-[#48C2C1]/15 border border-[#48C2C1]/25 hover:border-[#48C2C1]/40 rounded-2xl p-4 flex items-center grow gap-3.5 transition-all">
@@ -70,7 +70,7 @@ export default function Hero() {
                   <Home className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">نظافة تأهيلية</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">النظافة التأهيلية</div>
                   <div className="text-xl font-bold text-white">تبدأ من 229 ريال</div>
                 </div>
               </div>
@@ -80,8 +80,8 @@ export default function Hero() {
                   <Gem className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">نظافة شاملة</div>
-                  <div className="text-xl font-bold text-white">تبدأ من 329 ريال</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">غسيل الكنب والسجاد</div>
+                  <div className="text-xl font-bold text-white">تبدأ من 189 ريال</div>
                 </div>
               </div>
               
@@ -90,8 +90,8 @@ export default function Hero() {
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">شركات ومكاتب</div>
-                  <div className="text-xl font-bold text-white">سعر خاص ومميز</div>
+                  <div className="text-[12px] text-white/60 font-semibold mb-0.5">شاليهات ومساحات كبيرة</div>
+                  <div className="text-xl font-bold text-white">سعر خاص ومناسب</div>
                 </div>
               </div>
             </div>

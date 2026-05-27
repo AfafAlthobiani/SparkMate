@@ -3,16 +3,29 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES, Service } from '@/lib/services';
-import ServiceIcon from './ServiceIcon';
+import ServiceIcon, { UnitIcon } from './ServiceIcon';
+import { Info, Building2 } from 'lucide-react';
 
 interface ServicesProps {
   onBook: (service: Service) => void;
 }
 
 export default function Services({ onBook }: ServicesProps) {
-  const [filter, setFilter] = useState<'all' | 'tahili' | 'shamil' | 'commercial'>('all');
+  const [filter, setFilter] = useState<'all' | 'tahili' | 'shamil' | 'sterilization' | 'commercial'>('all');
 
   const filteredServices = SERVICES.filter(s => filter === 'all' || s.category === filter);
+
+  const formatPrice = (price: string, serviceId?: string) => {
+    if (!price) return '';
+    const trimmed = price.trim();
+    if (serviceId === 's1' || serviceId === 's2') {
+      return trimmed;
+    }
+    if (trimmed.startsWith('تبدأ') || trimmed.startsWith('يبدأ')) {
+      return trimmed;
+    }
+    return `تبدأ من ${trimmed}`;
+  };
 
   return (
     <section id="services" className="py-24 px-[5%] bg-[#f0f8ff]">
@@ -23,7 +36,7 @@ export default function Services({ onBook }: ServicesProps) {
       </div>
 
       <div className="flex justify-center gap-4 mb-14 flex-wrap">
-        {(['all', 'tahili', 'shamil', 'commercial'] as const).map((cat) => (
+        {(['all', 'tahili', 'shamil', 'sterilization', 'commercial'] as const).map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
@@ -33,7 +46,15 @@ export default function Services({ onBook }: ServicesProps) {
                 : 'bg-white text-[#3476A8] border-[#e0f7f7] hover:bg-linear-to-br hover:from-[#3476A8] hover:to-[#48C2C1] hover:text-white hover:border-transparent hover:shadow-lg hover:shadow-[#3476A8]/30 hover:scale-105'
             }`}
           >
-            {cat === 'all' ? 'الكل' : cat === 'tahili' ? 'النظافة التأهيلية' : cat === 'shamil' ? 'النظافة الشاملة' : 'تجاري وشركات'}
+            {cat === 'all' 
+              ? 'الكل' 
+              : cat === 'tahili' 
+              ? 'النظافة التأهيلية' 
+              : cat === 'shamil' 
+              ? 'غسيل الكنب والسجاد' 
+              : cat === 'sterilization' 
+              ? 'خدمات التعقيم المتخصصة' 
+              : 'تجاري وشركات'}
           </button>
         ))}
       </div>
@@ -70,17 +91,26 @@ export default function Services({ onBook }: ServicesProps) {
                       if (!u.unit) {
                         return (
                           <div key={i} className="flex justify-center items-center py-3 text-base">
-                            <span className="font-black text-[#3476A8] text-[20px]">{u.price}</span>
+                            <span className="font-black text-[#3476A8] text-[20px]">{formatPrice(u.price, service.id)}</span>
                           </div>
                         );
                       }
                       return (
                         <div key={i} className="flex justify-between items-center py-3 border-b border-dashed border-[#e8f4ff] last:border-0 text-base">
-                          <span className="text-[#4f5e71] font-semibold text-[15px]">{u.unit}</span>
-                          <span className="font-black text-[#3476A8] text-[18px]">{u.price}</span>
+                          <div className="flex items-center gap-2">
+                            <UnitIcon unitName={u.unit} className="w-4.5 h-4.5 text-[#3476A8]" />
+                            <span className="text-[#4f5e71] font-semibold text-[15px]">{u.unit}</span>
+                          </div>
+                          <span className="font-black text-[#3476A8] text-[18px]">{formatPrice(u.price, service.id)}</span>
                         </div>
                       );
                     })}
+                    {(service.id === 's1' || service.id === 's2') && (
+                      <div className="text-[12px] text-[#e05638] bg-[#fdf3f2] border border-[#fbdcd9] rounded-lg p-2 font-bold text-center mt-3 flex items-center justify-center gap-1.5 animate-pulse">
+                        <Info className="w-3.5 h-3.5 shrink-0 animate-bounce" />
+                        <span>الأمتار الزائدة عن العرض تحسب بخصم خاص</span>
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="bg-[#e0f7f7] border border-dashed border-[#48C2C1] rounded-xl p-4 text-[15px] text-[#1a7a7a] font-bold leading-relaxed">
@@ -102,6 +132,53 @@ export default function Services({ onBook }: ServicesProps) {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* Saudi Supervision & Pricing Notice Banner */}
+      <div className="mt-16 max-w-5xl mx-auto bg-white rounded-3xl p-6 sm:p-9 border-2 border-[#e0f7f7] shadow-[0_12px_30px_-5px_rgba(52,118,168,0.08)] text-right relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-2.5 h-full bg-gradient-to-b from-[#3476A8] to-[#48C2C1]" />
+        
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6 pb-6 border-b border-dashed border-[#e0f7f7]">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">🇸🇦</span>
+            <div>
+              <h3 className="text-xl sm:text-2xl font-black text-[#0d1b2a]">بإشراف شاب سعودي 🫡</h3>
+              <p className="text-sm font-bold text-[#1a7a7a] mt-0.5">بخدمتكم في جميع أعمال التنظيف والمتابعة المباشرة لضمان أعلى جودة.</p>
+            </div>
+          </div>
+          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto">
+            الأسعار لفترة محدودة ⏱️
+          </span>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#4f5e71] text-sm sm:text-base leading-relaxed font-bold">
+          <div className="space-y-3">
+            <h4 className="text-[#3476A8] font-black text-[15px] sm:text-[16px] flex items-center gap-2">
+              <Info className="w-5 h-5 text-[#3476A8] shrink-0" />
+              <span>ملاحظة هامة بشأن تسعير الخدمات:</span>
+            </h4>
+            <ul className="space-y-2 pr-2.5">
+              <li className="flex items-start gap-2 text-xs sm:text-[14px]">
+                <span className="text-[#48C2C1] mt-1 shrink-0">✔</span>
+                <span>الأسعار أعلاه تختلف حسب الحجم والمساحة، ويتم احتساب السعر النهائي بعد المعاينة الميدانية لضمان الدقة والنزاهة.</span>
+              </li>
+              <li className="flex items-start gap-2 text-xs sm:text-[14px]">
+                <span className="text-[#48C2C1] mt-1 shrink-0">✔</span>
+                <span>لأعمال غسيل الكنب والسجاد: الأمتار الزائدة عن عرض العرض الأساسي تحسب بدقة وبخصم خاص ومميز جداً لرضاكم.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-[#3476A8] font-black text-[15px] sm:text-[16px] flex items-center gap-2">
+              <Building2 className="w-5 h-5 text-[#3476A8] shrink-0" />
+              <span>المساحات التجارية الكبرى الخاصّة:</span>
+            </h4>
+            <p className="text-xs sm:text-[14px] leading-relaxed pr-2.5">
+              في حال وجود مساحات أكبر مثل <strong>المحلات التجارية، والمدارس، والنوادي، والمكاتب، والشاليهات</strong>، يرجى التواصل المباشر معنا لتزويدكم بالسعر المميز الذي يناسب احتياجاتكم بدقة.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

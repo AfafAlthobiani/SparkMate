@@ -3,7 +3,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-export default function Navbar() {
+interface NavbarProps {
+  showPromo?: boolean;
+}
+
+export default function Navbar({ showPromo = false }: NavbarProps) {
   const [logoSrc, setLogoSrc] = useState('/images/logo.png');
   const [hasError, setHasError] = useState(false);
 
@@ -16,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[5%] h-18 shadow-sm">
+    <nav className={`fixed ${showPromo ? 'top-10 sm:top-11' : 'top-0'} right-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[5%] h-18 shadow-sm transition-all duration-300`}>
       <div className="flex items-center gap-2.5">
         {!hasError ? (
           <Image 

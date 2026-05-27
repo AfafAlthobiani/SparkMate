@@ -9,7 +9,14 @@ import {
   Sparkles, 
   Crown, 
   Briefcase, 
-  School 
+  School,
+  Layers,
+  Hotel,
+  Warehouse,
+  Sofa,
+  Package,
+  Wind,
+  ChefHat
 } from 'lucide-react';
 
 interface ServiceIconProps {
@@ -41,7 +48,50 @@ export default function ServiceIcon({ id, className = "w-6 h-6 text-white" }: Se
     case 'c2':
       return <School className={className} />;
       
+    // تعقيم وتخصيص
+    case 'st1':
+      return <Wind className={className} />;
+    case 'st2':
+      return <ChefHat className={className} />;
+      
     default:
       return <Sparkles className={className} />;
   }
+}
+
+interface UnitIconProps {
+  unitName: string;
+  className?: string;
+}
+
+export function UnitIcon({ unitName, className = "w-5 h-5 text-[#3476A8]" }: UnitIconProps) {
+  const name = unitName || '';
+  if (name.includes('مكيف')) {
+    return <Wind className={className} />;
+  }
+  if (name.includes('مطبخ')) {
+    return <ChefHat className={className} />;
+  }
+  if (name.includes('صغيرة') && name.includes('شقة')) {
+    return <Home className={className} />;
+  }
+  if (name.includes('كبيرة') && name.includes('شقة')) {
+    return <Building className={className} />;
+  }
+  if (name.includes('دور') || name.includes('مستقل')) {
+    return <Layers className={className} />;
+  }
+  if (name.includes('صغيرة') && name.includes('فلة')) {
+    return <Hotel className={className} />;
+  }
+  if (name.includes('كبيرة') && name.includes('فلة')) {
+    return <Warehouse className={className} />;
+  }
+  if (name.includes('عرض') || name.includes('متكامل') || name.includes('سجاد')) {
+    return <Package className={className} />;
+  }
+  if (name.includes('كنب')) {
+    return <Sofa className={className} />;
+  }
+  return <Home className={className} />;
 }

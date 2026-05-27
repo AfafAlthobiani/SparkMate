@@ -12,14 +12,35 @@ import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
 import PhoneFAB from '@/components/PhoneFAB';
-import { Service } from '@/lib/services';
+import { Service, SERVICES } from '@/lib/services';
+import InitialLoader from '@/components/InitialLoader';
+import PromoBanner from '@/components/PromoBanner';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [showPromo, setShowPromo] = useState(true);
+
+  const handleBookPromo = () => {
+    const promoService = SERVICES.find(s => s.id === 's1');
+    if (promoService) {
+      setSelectedService(promoService);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
+      {/* Immersive Initial Page Loader */}
+      <InitialLoader />
+
+      {/* Dynamic Top Promotional Banner */}
+      {showPromo && (
+        <PromoBanner 
+          onClose={() => setShowPromo(false)} 
+          onBookPromo={handleBookPromo}
+        />
+      )}
+
+      <Navbar showPromo={showPromo} />
       <Hero />
       <Services onBook={(s) => setSelectedService(s)} />
       <HowItWorks />
