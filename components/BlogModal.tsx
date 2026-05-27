@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { BookOpen } from 'lucide-react';
 import Image from 'next/image';
 import { BLOG_POSTS } from '@/lib/blog';
 
@@ -28,10 +29,15 @@ export default function BlogModal({ onClose }: BlogModalProps) {
           onClick={e => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="p-4 sm:p-8 border-b border-[#e0f7f7] bg-white flex justify-between items-center shrink-0">
-            <div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-black text-[#0d1b2a] mb-1">مدونة رفيق اللمعة ✍️</h3>
-              <p className="text-xs sm:text-sm text-[#48C2C1] font-bold">رفيقك في النظافة واللمعان</p>
+          <div className="p-4 sm:p-8 border-b border-[#e0f7f7] bg-white flex justify-between items-center shrink-0 text-right" dir="rtl">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#48C2C1]/10 flex items-center justify-center shrink-0">
+                <BookOpen className="w-5 h-5 text-[#3476A8]" />
+              </div>
+              <div>
+                <h3 className="text-lg xs:text-xl sm:text-2xl font-black text-[#0d1b2a] mb-0.5">مدونة رفيق اللمعة</h3>
+                <p className="text-xs sm:text-sm text-[#48C2C1] font-bold">رفيقك في النظافة واللمعان</p>
+              </div>
             </div>
             <button 
               onClick={onClose}

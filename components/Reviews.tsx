@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { Star } from 'lucide-react';
 
 const REVIEWS = [
   {
@@ -28,8 +29,11 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-24 px-[5%] bg-[#f0f8ff]">
       <div className="text-center mb-16">
-        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">آراء العملاء</p>
-        <h2 className="text-4xl md:text-6xl font-black text-[#0d1b2a] mb-5 leading-tight">ماذا يقول عملاؤنا؟</h2>
+        <span className="inline-flex items-center gap-1.5 bg-[#48C2C1]/10 text-[#1a7a7a] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-[#48C2C1]/20 mb-4 select-none">
+          <Star className="w-3.5 h-3.5 text-[#1a7a7a] fill-[#1a7a7a]" />
+          <span>آراء عملائنا الكرام</span>
+        </span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0d1b2a] mb-5 leading-tight">ماذا يقول عملاؤنا؟</h2>
         <p className="text-lg md:text-xl text-[#4f5e71] max-w-2xl mx-auto leading-relaxed">ثقتهم فينا هي أكبر جائزة نحصل عليها</p>
       </div>
 

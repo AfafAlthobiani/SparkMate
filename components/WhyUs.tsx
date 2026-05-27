@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Users, Coins, Trophy } from 'lucide-react';
+import { Users, Coins, Trophy, Sparkles } from 'lucide-react';
 
 const FEATURES = [
   {
@@ -26,8 +26,11 @@ export default function WhyUs() {
   return (
     <section id="why" className="py-24 px-[5%] bg-white">
       <div className="text-center mb-16">
-        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">لماذا نحن؟</p>
-        <h2 className="text-4xl md:text-6xl font-black text-[#0d1b2a] mb-5 leading-tight">مميزات تخليك تختارنا دايماً</h2>
+        <span className="inline-flex items-center gap-1.5 bg-[#48C2C1]/10 text-[#1a7a7a] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-[#48C2C1]/20 mb-4 select-none">
+          <Sparkles className="w-3.5 h-3.5 text-[#1a7a7a]" />
+          <span>لماذا رفيق اللمعة؟</span>
+        </span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0d1b2a] mb-5 leading-tight">مميزات تخليك تختارنا دايماً</h2>
         <p className="text-lg md:text-xl text-[#4f5e71] max-w-2xl mx-auto leading-relaxed">نؤمن أن النظافة ليست مجرد خدمة، بل تجربة متكاملة تستحق الثقة</p>
       </div>
 

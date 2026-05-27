@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { Clock } from 'lucide-react';
 import Bubbles from './Bubbles';
 
 const STEPS = [
@@ -28,8 +29,11 @@ export default function HowItWorks() {
       <Bubbles />
       
       <div className="relative z-10 text-center mb-16">
-        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">طريقة الحجز</p>
-        <h2 className="text-4xl md:text-6xl font-black text-white mb-5 leading-tight">3 خطوات بس وخلصنا!</h2>
+        <span className="inline-flex items-center gap-1.5 bg-white/10 text-[#48C2C1] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-[rgba(72,194,193,0.2)] mb-4 select-none">
+          <Clock className="w-3.5 h-3.5 text-[#48C2C1]" />
+          <span>سهولة وسرعة الحجز</span>
+        </span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight">3 خطوات بس وخلصنا!</h2>
         <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">حجز خدمتك أسهل من أي وقت، بدون تعقيد ولا انتظار</p>
       </div>
 

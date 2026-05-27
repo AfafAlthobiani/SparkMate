@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES, Service } from '@/lib/services';
 import ServiceIcon, { UnitIcon } from './ServiceIcon';
-import { Info, Building2 } from 'lucide-react';
+import { Info, Building2, Sparkles, Clock } from 'lucide-react';
 
 interface ServicesProps {
   onBook: (service: Service) => void;
@@ -30,8 +30,11 @@ export default function Services({ onBook }: ServicesProps) {
   return (
     <section id="services" className="py-24 px-[5%] bg-[#f0f8ff]">
       <div className="text-center mb-16">
-        <p className="text-base font-extrabold tracking-[2px] text-[#48C2C1] uppercase mb-3">خدماتنا</p>
-        <h2 className="text-4xl md:text-6xl font-black text-[#0d1b2a] mb-5 leading-tight">اختر الخدمة المناسبة لك</h2>
+        <span className="inline-flex items-center gap-1.5 bg-[#48C2C1]/10 text-[#1a7a7a] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-[#48C2C1]/20 mb-4 select-none">
+          <Sparkles className="w-3.5 h-3.5 text-[#1a7a7a]" />
+          <span>خدماتنا المتميزة</span>
+        </span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0d1b2a] mb-5 leading-tight">اختر الخدمة المناسبة لك</h2>
         <p className="text-lg md:text-xl text-[#4f5e71] max-w-2xl mx-auto leading-relaxed">نوفر لك مجموعة متكاملة من خدمات التنظيف الاحترافية التي تلبي جميع احتياجاتك</p>
       </div>
 
@@ -180,8 +183,9 @@ export default function Services({ onBook }: ServicesProps) {
               <p className="text-sm font-bold text-[#1a7a7a] mt-0.5">بخدمتكم في جميع أعمال التنظيف والمتابعة المباشرة لضمان أعلى جودة.</p>
             </div>
           </div>
-          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto mt-3 sm:mt-0">
-            الأسعار لفترة محدودة ⏱️
+          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto mt-3 sm:mt-0 flex items-center gap-1.5 select-none">
+            <Clock className="w-4 h-4 text-[#1a7a7a]" />
+            <span>الأسعار لفترة محدودة</span>
           </span>
         </div>
         
