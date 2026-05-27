@@ -10,7 +10,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen bg-linear-to-br from-[#0d1b2a] via-[#1a3a5c] to-[#0d2d40] flex items-center overflow-hidden">
       <Bubbles />
       
-      <div className="relative z-10 w-[90%] max-w-7xl mx-auto py-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-right">
+      <div className="relative z-10 w-[90%] max-w-7xl mx-auto pt-28 pb-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center text-right">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Hero() {
                 <ShieldCheck className="w-4 h-4 text-[#3476A8]" />
                 <span>إشراف شاب سعودي🇸🇦 (بخدمتكم)</span>
               </div>
-              <div className="absolute bottom-7.5 -left-6 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#48C2C1] animate-float-slow [animation-delay:1.5s] border border-[#48C2C1]/10">
+              <div className="absolute bottom-2 -left-6 bg-white rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-xl text-[13px] font-bold text-[#48C2C1] animate-float-slow [animation-delay:1.5s] border border-[#48C2C1]/10">
                 <CheckCircle className="w-4 h-4 text-[#48C2C1]" />
                 <span>الأسعار لفترة محدودة ⏱️</span>
               </div>

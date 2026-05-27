@@ -150,9 +150,8 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
           </button>
 
           {/* Header */}
-          <div className="mb-6 flex items-center gap-2.5">
-            <Sparkles className="w-6 h-6 text-[#48C2C1] animate-pulse" />
-            <h3 className="text-2xl font-black text-[#0d1b2a]">تخصيص وحجز موعدك</h3>
+          <div className="mb-6 flex items-center gap-2.5 pt-1.5 sm:pt-0">
+            <h3 className="text-xl sm:text-2xl font-black text-[#0d1b2a]">تخصيص وحجز موعدك</h3>
           </div>
 
           {/* Selected Service Badge */}

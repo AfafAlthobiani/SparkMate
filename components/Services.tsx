@@ -72,9 +72,14 @@ export default function Services({ onBook }: ServicesProps) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-[22px] overflow-hidden border border-[#e8f4ff] shadow-[0_4px_18px_rgba(52,118,168,0.07)] hover:-translate-y-1.5 hover:shadow-[0_12px_35px_rgba(52,118,168,0.15)] transition-all cursor-pointer flex flex-col group"
+              className="bg-white rounded-[22px] border border-[#e8f4ff] shadow-[0_4px_18px_rgba(52,118,168,0.07)] hover:-translate-y-1.5 hover:shadow-[0_12px_35px_rgba(52,118,168,0.15)] transition-all cursor-pointer flex flex-col group relative"
             >
-              <div className="p-6 pb-4.5 bg-linear-to-br from-[#f0f8ff] to-[#e0f7f7] border-b border-[#dceef9] flex items-center gap-3.5">
+              {service.id === 's1' && (
+                <div id="s1-best-value-badge" className="absolute -top-3 right-6 bg-red-600 text-white text-[11px] sm:text-xs font-black px-3.5 py-1.5 rounded-full shadow-md z-10 flex items-center gap-1 border border-red-500 select-none">
+                  🔥 الأكثر توفيراً
+                </div>
+              )}
+              <div className="p-6 pb-4.5 bg-linear-to-br from-[#f0f8ff] to-[#e0f7f7] border-b border-[#dceef9] flex items-center gap-3.5 rounded-t-[22px]">
                 <div className="w-12 h-12 rounded-xl bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center shrink-0">
                   <ServiceIcon id={service.id} className="w-6 h-6 text-white" />
                 </div>
@@ -119,11 +124,6 @@ export default function Services({ onBook }: ServicesProps) {
                 )}
                 
                 <div className="mt-auto pt-5.5 relative">
-                  {service.id === 's1' && (
-                    <span id="s1-popular-badge" className="absolute -top-3.5 right-1/2 translate-x-1/2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full shadow-md select-none animate-bounce z-10 flex items-center gap-1 border border-orange-400">
-                      🔥 الأكثر طلباً ووفراً
-                    </span>
-                  )}
                   {service.id === 's1' ? (
                     <motion.button 
                       id={`book-btn-${service.id}`}
@@ -180,7 +180,7 @@ export default function Services({ onBook }: ServicesProps) {
               <p className="text-sm font-bold text-[#1a7a7a] mt-0.5">بخدمتكم في جميع أعمال التنظيف والمتابعة المباشرة لضمان أعلى جودة.</p>
             </div>
           </div>
-          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto">
+          <span className="bg-[#48C2C1]/10 text-[#1a7a7a] text-sm font-black px-4 py-2 rounded-xl border border-[#48C2C1]/30 shrink-0 self-start md:self-auto mt-3 sm:mt-0">
             الأسعار لفترة محدودة ⏱️
           </span>
         </div>

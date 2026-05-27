@@ -20,46 +20,46 @@ export default function Navbar({ showPromo = false }: NavbarProps) {
   };
 
   return (
-    <nav className={`fixed ${showPromo ? 'top-10 sm:top-11' : 'top-0'} right-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[5%] h-18 shadow-sm transition-all duration-300`}>
-      <div className="flex items-center gap-2.5">
+    <nav className={`fixed ${showPromo ? 'top-10 sm:top-11' : 'top-0'} right-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#e0f7f7] flex items-center justify-between px-[4%] sm:px-[5%] h-16 sm:h-18 shadow-sm transition-all duration-300`}>
+      <div className="flex items-center gap-2 shrink-0">
         {!hasError ? (
           <Image 
             src={logoSrc} 
             alt="رفيق اللمعة" 
             width={180} 
             height={60} 
-            className="h-10 md:h-12 w-auto object-contain"
+            className="h-8 xs:h-10 md:h-12 w-auto object-contain"
             onError={handleLogoError}
             priority
             referrerPolicy="no-referrer"
           />
         ) : (
           <div className="flex items-center gap-1 select-none">
-            <span className="text-[#0d1b2a] font-black text-xl tracking-tight">
+            <span className="text-[#0d1b2a] font-black text-sm xs:text-lg sm:text-xl tracking-tight">
               رفيق <span className="text-[#48C2C1]">اللمعة</span>
             </span>
           </div>
         )}
       </div>
       
-      <ul className="hidden md:flex gap-7 list-none">
+      <ul className="hidden md:flex gap-5 lg:gap-7 list-none">
         <li>
-          <a href="#services" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">خدماتنا</a>
+          <a href="#services" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">خدماتنا</a>
         </li>
         <li>
-          <a href="#how" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">طريقة الحجز</a>
+          <a href="#how" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">طريقة الحجز</a>
         </li>
         <li>
-          <a href="#why" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">لماذا نحن؟</a>
+          <a href="#why" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">لماذا نحن؟</a>
         </li>
         <li>
-          <a href="#blog" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">المدونة</a>
+          <a href="#blog" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">المدونة</a>
         </li>
         <li>
-          <a href="#reviews" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">آراء العملاء</a>
+          <a href="#reviews" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">آراء العملاء</a>
         </li>
         <li>
-          <a href="#contact" className="text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">تواصل معنا</a>
+          <a href="#contact" className="text-[14px] lg:text-[15px] font-medium text-[#0d1b2a] hover:text-[#48C2C1] transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:right-0 after:w-0 after:h-0.5 after:bg-[#48C2C1] hover:after:w-full after:transition-all">تواصل معنا</a>
         </li>
       </ul>
 
@@ -67,7 +67,7 @@ export default function Navbar({ showPromo = false }: NavbarProps) {
         href="https://wa.me/966559205714?text=مرحباً، أريد الاستفسار عن خدمات رفيق اللمعة" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="bg-gradient-to-br from-[#48C2C1] to-[#3476A8] text-white px-5 py-2.5 rounded-full text-[15px] font-bold shadow-lg shadow-[#48C2C1]/35 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#48C2C1]/50 transition-all text-center no-underline"
+        className="bg-gradient-to-br from-[#48C2C1] to-[#3476A8] text-white px-3 py-1.5 xs:px-4 xs:py-2 sm:px-5 sm:py-2.5 rounded-full text-[11px] xs:text-xs sm:text-[15px] font-bold shadow-lg shadow-[#48C2C1]/35 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#48C2C1]/50 transition-all text-center no-underline shrink-0"
       >
         حجز الخدمة
       </a>
