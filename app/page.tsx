@@ -13,7 +13,6 @@ import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
 import PhoneFAB from '@/components/PhoneFAB';
 import { Service, SERVICES } from '@/lib/services';
-import InitialLoader from '@/components/InitialLoader';
 import PromoBanner from '@/components/PromoBanner';
 
 export default function Home() {
@@ -29,9 +28,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Immersive Initial Page Loader */}
-      <InitialLoader />
-
       {/* Dynamic Top Promotional Banner */}
       {showPromo && (
         <PromoBanner 

@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import ContactForm from './ContactForm';
 import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 
 export default function Footer() {
@@ -97,7 +96,6 @@ export default function Footer() {
               <p className="font-sans">info@sparkmate.sa</p>
             </div>
           </div>
-          <ContactForm />
         </div>
       </div>
 
