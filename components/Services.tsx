@@ -82,6 +82,11 @@ export default function Services({ onBook }: ServicesProps) {
                   🔥 الأكثر توفيراً
                 </div>
               )}
+              {service.id === 'st1' && (
+                <div id="st1-offer-badge" className="absolute -top-3 right-6 bg-red-600 text-white text-[11px] sm:text-xs font-black px-3.5 py-1.5 rounded-full shadow-md z-10 flex items-center gap-1 border border-red-500 select-none animate-pulse">
+                  🔥 عرض خاص لفترة محدودة
+                </div>
+              )}
               <div className="p-6 pb-4.5 bg-linear-to-br from-[#f0f8ff] to-[#e0f7f7] border-b border-[#dceef9] flex items-center gap-3.5 rounded-t-[22px]">
                 <div className="w-12 h-12 rounded-xl bg-linear-to-br from-[#3476A8] to-[#48C2C1] flex items-center justify-center shrink-0">
                   <ServiceIcon id={service.id} className="w-6 h-6 text-white" />
@@ -109,7 +114,9 @@ export default function Services({ onBook }: ServicesProps) {
                             <UnitIcon unitName={u.unit} className="w-4.5 h-4.5 text-[#3476A8]" />
                             <span className="text-[#4f5e71] font-semibold text-[15px]">{u.unit}</span>
                           </div>
-                          <span className="font-black text-[#3476A8] text-[18px]">{formatPrice(u.price, service.id)}</span>
+                          <span className={`font-black text-[18px] ${service.id === 'st1' ? 'text-red-600 font-extrabold' : 'text-[#3476A8]'}`}>
+                            {formatPrice(u.price, service.id)}
+                          </span>
                         </div>
                       );
                     })}
