@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
           <p className="text-[13px] text-white/50 leading-relaxed my-4">رفيقك في النظافة واللمعان<br />نخدم المدينة المنورة وضواحيها بكل احتراف وأمانة</p>
           <div className="flex gap-2.5">
-            <a href="#" className="w-9.5 h-9.5 rounded-full bg-white/8 flex items-center justify-center text-lg hover:bg-[#48C2C1] hover:scale-110 transition-all text-white">
+            <a href="https://www.facebook.com/profile.php?id=61590314567967" target="_blank" rel="noopener noreferrer" className="w-9.5 h-9.5 rounded-full bg-white/8 flex items-center justify-center text-lg hover:bg-[#48C2C1] hover:scale-110 transition-all text-white">
               <i className="fa-brands fa-facebook-f text-sm"></i>
             </a>
             <a href="https://www.instagram.com/sparkmate.sa" target="_blank" className="w-9.5 h-9.5 rounded-full bg-white/8 flex items-center justify-center text-lg hover:bg-[#48C2C1] hover:scale-110 transition-all text-white">

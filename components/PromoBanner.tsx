@@ -35,8 +35,7 @@ export default function PromoBanner({ onClose, onBookPromo }: PromoBannerProps) 
           </motion.div>
           
           <div className="flex items-center gap-1 sm:gap-2 text-[10px] xs:text-xs sm:text-sm font-black text-white whitespace-nowrap overflow-hidden text-ellipsis">
-            <span className="text-[#48C2C1]">صدمة الأسعار! ✨</span>
-            <span className="hidden sm:inline-block">باقة الغسيل والتعقيم:</span>
+            <span className="hidden sm:inline-block">باقة الغسيل والتعقيم: ✨</span>
             <span className="text-orange-300 bg-white/10 px-1.5 py-0.5 rounded-md hover:bg-white/15 transition-all text-[9.5px] xs:text-xs">العرض المتكامل 🎁</span>
             <span className="text-white/80 hidden xs:inline-block">(كنب + سجاد + ستارة + جدران)</span>
             <span className="text-[#48C2C1] font-black text-[10px] xs:text-xs sm:text-[15px] bg-[#48C2C1]/10 px-1.5 py-0.5 rounded border border-[#48C2C1]/25">209 ريال فقط!</span>
