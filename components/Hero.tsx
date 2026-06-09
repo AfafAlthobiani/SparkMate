@@ -10,7 +10,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen bg-linear-to-br from-[#0d1b2a] via-[#1a3a5c] to-[#0d2d40] flex items-center overflow-hidden">
       <Bubbles />
       
-      <div className="relative z-10 w-[90%] max-w-7xl mx-auto pt-28 pb-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center text-right">
+      <div className="relative z-10 w-[90%] max-w-7xl mx-auto pt-12 sm:pt-16 lg:pt-20 pb-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center text-right">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
